@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 15px;
+        }
+    </style>
+</head>
+<table id="data" class="table table-striped">
+    <thead>
+    <tr>
+        <th>Word</th>
+        <th>TF</th>
+        <th>IDF</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data %}
+    <tr>
+        <td> {{ row[3] }}</td>
+        <td> {{ row[1] }}</td>
+        <td> {{ row[0] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</html>
